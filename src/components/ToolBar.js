@@ -3,11 +3,11 @@ import { ToolbarContainer } from '../styles/components/toolbar'
 import Dropdown from './Dropdown'
 import SearchBox from './SearchBox'
 
-function ToolBar() {
+function ToolBar(props) {
     return (
         <ToolbarContainer>
-            <SearchBox />
-            <Dropdown />
+            <SearchBox searchByName={props.searchByName}/>
+            <Dropdown filterByRegion={props.filterByRegion} isSearchingByName={props.isSearchingByName}/>
         </ToolbarContainer>
     )
 }

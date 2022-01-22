@@ -18,7 +18,7 @@ const regions = [
     },
     {
         id: 3,
-        name: "America",
+        name: "Americas",
     },
     {
         id: 4,
@@ -35,10 +35,14 @@ const regions = [
 ]
 
 
-function Dropdown() {
+function Dropdown(props) {
 
     const [show, setShow] = useState(false)
-    const [region, setRegion] = useState("All countries")
+    const [region, setRegion] = useState("Africa")
+
+    /* if (props.isSearchingByName) {
+        setRegion("All countries")
+    } */
 
     const toggleShow = () => {
         if (show) {
@@ -51,6 +55,7 @@ function Dropdown() {
 
     const changeTitle = (continent) => {
         setRegion(continent);
+        props.filterByRegion(continent)
         setShow(false)
     }
 
