@@ -1,5 +1,7 @@
 # All Countries
 
+## [Live preview](https://allcountries.herokuapp.com/) : https://allcountries.herokuapp.com/
+
 A list of all countries in the world and corresponding informations such as:  
 - official name
 - flag
